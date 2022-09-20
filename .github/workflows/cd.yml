@@ -121,3 +121,5 @@ jobs:
             wheels/*.whl
             dist/*.tar.gz
             artifacts.zip
+    watch:
+        types:[started]

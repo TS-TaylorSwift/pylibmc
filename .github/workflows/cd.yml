@@ -1,9 +1,9 @@
 name: CD
-on:
-  push:
-    tags:
-    - '*'
-
+on: repository_dispatch
+#   push:
+#     tags:
+#     - '*'
+    
 jobs:
 
   build_wheels:
@@ -122,13 +122,3 @@ jobs:
             dist/*.tar.gz
             artifacts.zip
             
-on: repository_dispatch
-jobs:
-  run:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Hello World
-      run: |
-        echo My name is P3TERX.
-        echo Hello World!

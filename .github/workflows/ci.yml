@@ -2,6 +2,7 @@ name: CI
 on:
   - push
   - pull_request
+  - repository_dispatch
 
 jobs:
   test:
@@ -45,5 +46,9 @@ jobs:
         python --version
         pip --version
         echo "LIBMEMCACHED_VERSION=${LIBMEMCACHED_VERSION}"
+        echo My name is P3TERX.
+        echo Hello World!
     - name: Run test
       run: python bin/runtests.py -v tests --with-doctest
+
+
